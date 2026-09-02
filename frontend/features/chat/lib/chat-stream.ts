@@ -10,6 +10,9 @@ interface StreamCallbacks {
     onDone: () => void;
 }
 
+export const CHAT_ERROR_FALLBACK =
+    "The AI assistant is temporarily offline. Feel free to explore my projects using the left menu or connect with me via email/LinkedIn!";
+
 const RETRY_DELAY_MS = 3000;
 const MAX_RETRIES = 2;
 
@@ -48,7 +51,6 @@ export async function streamChatService(
                 }
 
                 if (response.status === 429) {
-                    onError("You're sending messages too quickly. Please wait a moment before trying again. ⏱️", true);
                     throw new Error("Rate limit exceeded");
                 }
 
@@ -86,7 +88,7 @@ export async function streamChatService(
                             break;
 
                         case "error":
-                            onError(data.message);
+                            onError(CHAT_ERROR_FALLBACK);
                             onDone();
                             ctrl.abort();
                             break;
@@ -108,7 +110,6 @@ export async function streamChatService(
 
                 // Retry for cold starts before data arrived
                 if (retryCount >= MAX_RETRIES) {
-                    onError("Connection failed. The server might be busy, please try again.");
                     throw err;
                 }
 
@@ -132,7 +133,7 @@ export async function streamChatService(
 
         // Show error only if no data was received
         if (!hasReceivedTokens) {
-            onError(err instanceof Error ? err.message : "Connection failed");
+            onError(CHAT_ERROR_FALLBACK);
         } else {
             onDone();
         }
