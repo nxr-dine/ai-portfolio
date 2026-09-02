@@ -166,7 +166,7 @@ function ProjectCard({ item, isActive }: { item: ProjectItem; isActive: boolean 
             )}
         >
             {/* Image Section - Adjusted for desktop */}
-            <div className="relative h-[40%] sm:h-[48%] md:h-[50%] w-full overflow-hidden rounded-t-2xl sm:rounded-t-[2.5rem] md:rounded-t-[3rem] bg-zinc-950">                {/* Efficient Background Aura (Low Quality, High Blur) */}
+            <div className="relative h-72 w-full overflow-hidden rounded-t-2xl sm:rounded-t-[2.5rem] md:rounded-t-[3rem] bg-zinc-950">                {/* Efficient Background Aura (Low Quality, High Blur) */}
                 {item.image && (
                     <div className="absolute inset-0 z-0 overflow-hidden opacity-20 select-none pointer-events-none">
                         <Image
@@ -175,7 +175,7 @@ function ProjectCard({ item, isActive }: { item: ProjectItem; isActive: boolean 
                             fill
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                             quality={10} // Extremely low quality for blurred background saves bandwidth
-                            className="object-cover scale-110 blur-3xl"
+                            className="object-contain scale-110 blur-3xl"
                         />
                     </div>
                 )}
@@ -183,16 +183,13 @@ function ProjectCard({ item, isActive }: { item: ProjectItem; isActive: boolean 
                 {/* Main Project Visual (More Zoomed) */}
                 {item.image ? (
                     <div className="absolute inset-0 z-10 flex items-center justify-center">
-                        <div className={cn(
-                            "relative w-full h-full",
-                            "scale-[1.65] sm:scale-[1.70] md:scale-[1.55]"
-                        )}>
+                        <div className="relative w-full h-full">
                             <Image
                                 src={item.image}
                                 alt={item.title}
                                 fill
                                 quality={75}
-                                className="object-cover object-top drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                                className="object-contain object-top drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                                 priority={true}
                                 loading="eager"
