@@ -1,0 +1,21 @@
+### Smart Recitation Tracker
+
+**Category:** AI / Speech Recognition / Quran Technology
+
+**Description:**
+An intelligent application that uses Automatic Speech Recognition (ASR) to convert Quran recitation into text, compare it against the reference Quranic text, identify errors, calculate a matching percentage, and generate reports for review.
+
+**Technologies:**
+- Vosk
+- Speech Recognition
+- Arabic Speech Processing
+- Quranic Text Processing
+
+**Features:**
+- Speech-to-text
+- Quran reference comparison
+- Error detection
+- Matching percentage
+- Recitation review reports
+
+**Creator:** Noureddine Bouderbala

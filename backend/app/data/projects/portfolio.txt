@@ -1,0 +1,24 @@
+### AI Portfolio Assistant
+
+**Category:** Full-stack Generative AI
+
+**Description:**
+An AI-powered portfolio website featuring a conversational interface, RAG-based knowledge retrieval, and real-time streaming chat. Visitors can explore projects, skills, experience, and career interests through natural conversation.
+
+**Technologies:**
+- FastAPI
+- Next.js
+- LangChain
+- PostgreSQL
+- pgvector
+- Redis
+- OpenAI
+
+**Features:**
+- AI chatbot with portfolio knowledge base
+- Real-time SSE streaming
+- Project and skills showcase
+- Resume integration
+- Contact form
+
+**Creator:** Noureddine Bouderbala

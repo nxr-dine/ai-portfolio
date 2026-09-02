@@ -1,0 +1,21 @@
+### PLUAE – University Job Platform
+
+**Category:** Full-stack Web Application
+
+**Description:**
+A responsive university job platform connecting students and companies.
+
+**Technologies:**
+- Next.js
+- TypeScript
+- Tailwind CSS
+- PostgreSQL
+
+**Features:**
+- Multi-role dashboards
+- Secure authentication
+- PostgreSQL integration
+- Student-company connections
+- Job management
+
+**Creator:** Noureddine Bouderbala

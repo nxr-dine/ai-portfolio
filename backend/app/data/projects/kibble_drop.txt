@@ -1,0 +1,23 @@
+### KibbleDrop – Pet Food Subscription Platform
+
+**Category:** Full-stack SaaS / E-commerce
+
+**Description:**
+A modern platform for managing pet food subscriptions.
+
+**Technologies:**
+- Next.js
+- Prisma
+- PostgreSQL
+- Stripe
+- Tailwind CSS
+- shadcn/ui
+
+**Features:**
+- Authentication
+- Subscription management
+- Payment integration
+- Modern responsive interface
+- Database-driven application architecture
+
+**Creator:** Noureddine Bouderbala

@@ -1,0 +1,20 @@
+### Athar Baqi
+
+**Category:** Full-stack Web Platform / Islamic Education
+
+**Description:**
+A digital platform for Quran learning and Islamic content publishing, built with a modern responsive interface and content management capabilities.
+
+**Technologies:**
+- Next.js
+- TypeScript
+- Modern Web Technologies
+
+**Features:**
+- Quran learning
+- Islamic content publishing
+- Content management
+- Responsive user interface
+- Fast modern web experience
+
+**Creator:** Noureddine Bouderbala

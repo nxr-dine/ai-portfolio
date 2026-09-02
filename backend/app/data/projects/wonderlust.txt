@@ -1,0 +1,20 @@
+### Wonderlust
+
+**Category:** AI-powered Travel Platform
+
+**Description:**
+An integrated web and mobile travel platform designed for trip planning, AI-powered recommendations, and secure booking management.
+
+**Technologies:**
+- React
+- Node.js
+- MongoDB
+- Flask
+
+**Features:**
+- Trip planning
+- AI-based recommendations
+- Booking management
+- Web and mobile experience
+
+**Creator:** Noureddine Bouderbala

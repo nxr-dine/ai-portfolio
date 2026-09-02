@@ -1,0 +1,27 @@
+### LinkedIn Profile Summary for Noureddine Bouderbala
+
+**Headline:** Software Engineer | Full-Stack Developer | AI Engineering Student
+
+**Location:** Bouira, Algeria
+
+**About:**
+Noureddine Bouderbala is a Software Engineer and Full-Stack Developer currently in his third year at ESTIN (Higher School of Computer Science and Digital Technologies). He has hands-on experience across full-stack web development, AI/ML, ERP systems, databases, DevOps, and network administration.
+
+He builds modern web applications and AI-powered solutions using Next.js, React, Node.js, Python, PostgreSQL, MongoDB, Prisma, Hugging Face, and PyTorch.
+
+**Experience Highlights:**
+- Network & Systems Intern at GCB (September 2025)
+- ERP Intern at Inspectra (September 2025 – January 2026)
+- AI / Machine Learning Trainee at Sahl Tech Solutions — Quran Recitation AI / Taysir project
+- Freelance Full-Stack Developer (2025 – Present)
+- Freelance Video Editor & Content Creator (2024 – Present)
+
+**Education:**
+- Engineering Degree in Computer Science — ESTIN (third-year student, top 28% of 2024 cohort)
+- Algerian Baccalaureate, Mathematics/Scientific Stream — 17.69/20 (2022)
+
+**Skills:** Full-stack development, AI/ML, speech recognition, Whisper fine-tuning, Next.js, React, TypeScript, Node.js, Python, PostgreSQL, MongoDB, Prisma, Docker, Odoo ERP, and more.
+
+**Connect:**
+- GitHub: https://github.com/nxr-dine
+- LinkedIn: https://www.linkedin.com/in/nxr-dine/

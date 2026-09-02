@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+:root {
+    /* Font Variables (Injected by Next.js, defined here for linter) */
+    --font-geist-sans: sans-serif;
+    --font-geist-mono: monospace;
+
+    color-scheme: dark;
+    --background: oklch(0.23 0.002 247.933);
+    --foreground: oklch(0.95 0.005 264);
+    --card: oklch(0.217 0.028 274.545);
+    --card-foreground: oklch(0.95 0.005 264);
+    --popover: oklch(0.22 0.01 264);
+    --popover-foreground: oklch(0.95 0.005 264);
+    --primary: oklch(0.6 0.18 264);
+    --primary-foreground: oklch(0.12 0.01 264);
+    --secondary: oklch(0.25 0.01 264);
+    --secondary-foreground: oklch(0.95 0.005 264);
+    --muted: oklch(0.25 0.01 264);
+    --muted-foreground: oklch(0.7 0.01 264);
+    --accent: oklch(0.55 0.18 264);
+    --accent-foreground: oklch(0.95 0.005 264);
+    --destructive: oklch(0.5 0.2 27);
+    --destructive-foreground: oklch(0.95 0.005 264);
+    --border: oklch(0.35 0.01 264);
+    --input: oklch(0.35 0.01 264);
+    --ring: oklch(0.6 0.18 264);
+    --chat-user-bg: oklch(0.344 0.013 267.163);
+    --chat-user-fg: oklch(0.99 0 0);
+    --chat-bot-bg: transparent;
+    --chat-bot-fg: oklch(0.92 0.005 264);
+    --chat-input-bg: oklch(0.298 0.002 286.291 / 0.83);
+    --sidebar: oklch(0.18 0.03 280);
+    --sidebar-foreground: oklch(0.92 0.005 264);
+    --sidebar-primary: oklch(0.6 0.18 264);
+    --sidebar-primary-foreground: oklch(0.12 0.01 264);
+    --sidebar-accent: oklch(0.6 0.15 290);
+    --sidebar-accent-foreground: oklch(0.1 0.02 290);
+    --sidebar-border: oklch(0.35 0.03 280);
+    --sidebar-ring: oklch(0.6 0.18 264);
+    --sidebar-header-bg: oklch(0.22 0.03 200);
+    --topic-button-accent: oklch(0.22 0.01 264);
+    --topic-button-accent-foreground: oklch(0.95 0.005 264);
+    --radius: 0.75rem;
+}
+
+html {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+@theme inline {
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chat-user-bg: var(--chat-user-bg);
+    --color-chat-user-fg: var(--chat-user-fg);
+    --color-chat-bot-bg: var(--chat-bot-bg);
+    --color-chat-bot-fg: var(--chat-bot-fg);
+    --color-chat-input-bg: var(--chat-input-bg);
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-header-bg: var(--sidebar-header-bg);
+    --color-topic-button-accent: var(--topic-button-accent);
+    --color-topic-button-accent-foreground: var(--topic-button-accent-foreground);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes shimmer-flow {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* src/app/globals.css */
+
+@layer utilities {
+    .spotlight-active {
+        @apply relative z-50 border-indigo-500/30 ring-1 ring-indigo-500/30;
+        animation: spotlight-pulse 2s ease-in-out infinite;
+    }
+}
+
+@keyframes spotlight-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+        border-color: rgba(99, 102, 241, 0.2);
+    }
+
+    50% {
+        /* The Glow Effect - Sharper shadow (less blur radius) */
+        box-shadow: 0 0 4px 1px rgba(99, 102, 241, 0.4);
+        border-color: rgba(99, 102, 241, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+        border-color: rgba(99, 102, 241, 0.2);
+    }
+}
+
+@layer utilities {
+    .scrollbar-thin::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-track {
+        background: oklch(0.2 0.01 264);
+        border-radius: 9999px;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+        background-color: oklch(0.35 0.01 264);
+        border-radius: 9999px;
+    }
+
+    .scrollbar-thin:hover::-webkit-scrollbar-thumb {
+        background-color: oklch(0.45 0.01 264);
+    }
+
+    .scrollbar-thumb-rounded-full::-webkit-scrollbar-thumb {
+        border-radius: 9999px;
+    }
+
+    .scrollbar-track-transparent::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .scrollbar-thumb-muted-foreground\/30::-webkit-scrollbar-thumb {
+        background-color: var(--color-muted-foreground);
+        opacity: 0.3;
+    }
+
+    .hover\:scrollbar-thumb-muted-foreground\/50:hover::-webkit-scrollbar-thumb {
+        background-color: var(--color-muted-foreground);
+        opacity: 0.5;
+    }
+
+    .animate-shimmer-flow {
+        animation: shimmer-flow 3s infinite linear;
+        background: linear-gradient(to right,
+                hsl(var(--muted-foreground)) 20%,
+                hsl(var(--foreground)) 50%,
+                hsl(var(--muted-foreground)) 80%);
+        background-size: 1000px 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+/* Accessibility: Respect users who prefer reduced motion (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

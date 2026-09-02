@@ -1,0 +1,125 @@
+### Noureddine Bouderbala - Resume Summary
+
+Noureddine Bouderbala is a Software Engineer and Full-Stack Developer currently studying at ESTIN, with hands-on experience across full-stack web development, AI/ML, ERP systems, databases, DevOps, and network administration. He builds modern web applications and AI-powered solutions using technologies such as Next.js, React, Node.js, Python, PostgreSQL, MongoDB, Prisma, Hugging Face, and PyTorch.
+
+---
+
+## Contact Information
+- **Name:** Noureddine Bouderbala
+- **Title:** Software Engineer | Full-Stack Developer | AI Engineering Student
+- **Location:** Bouira, Algeria
+- **Phone:** +213540194210
+- **GitHub:** https://github.com/nxr-dine
+- **LinkedIn:** https://www.linkedin.com/in/nxr-dine/
+
+---
+
+## Professional Experience
+
+### Network & Systems Intern — GCB
+**Location:** Boudouaou, Boumerdès, Algeria  
+**Date:** September 2025
+
+**Responsibilities:**
+- Configured and administered Windows Server and the company's local network.
+- Integrated a stock management application with SQL Server.
+- Implemented backup and security mechanisms to improve data reliability.
+
+---
+
+### ERP Intern — Inspectra
+**Location:** Eucalyptus, Algiers, Algeria  
+**Date:** September 2025 – January 2026
+
+**Responsibilities:**
+- Installed, configured, and customized Odoo ERP modules.
+- Worked with CRM, Sales, HR, Payroll, Website, Documents, and Sign modules.
+- Managed and optimized MySQL databases for module integration.
+- Deployed services using Docker.
+- Worked toward a modular and maintainable deployment environment.
+
+---
+
+### AI / Machine Learning Trainee — Sahl Tech Solutions (Sahl للحلول التقنية)
+**Project:** Quran Recitation AI / Taysir
+
+**Responsibilities:**
+- Worked on adapting OpenAI Whisper for Quran recitation.
+- Fine-tuned Whisper-small using the Tarteel Quran dataset.
+- Worked on improving recitation-to-text accuracy.
+- Built an audio processing pipeline for Quran recitation recognition.
+- Worked with Hugging Face datasets and tools.
+- Explored model fine-tuning techniques including LoRA.
+
+**Technologies:** Python, OpenAI Whisper, Hugging Face, Hugging Face Datasets, PyTorch, LoRA, Speech Recognition, Machine Learning, Audio Processing
+
+---
+
+### Full-Stack Developer — Freelance / Remote
+**Location:** Algeria  
+**Date:** 2025 – Present
+
+**Responsibilities:**
+- Developed and maintained web applications using Next.js.
+- Implemented backend logic using Next.js API routes.
+- Built dynamic user-facing functionality.
+- Developed backend functionality supporting interactive web applications.
+- Worked on modern full-stack web development projects.
+
+**Technologies:** Next.js, React, TypeScript, Tailwind CSS, Node.js, Express.js, PostgreSQL, Prisma, MongoDB, Supabase
+
+---
+
+### Freelance Video Editor & Content Creator
+**Date:** 2024 – Present
+
+**Responsibilities:**
+- Edited short-form videos for Instagram Reels, TikTok, and YouTube Shorts.
+- Created promotional and marketing videos for businesses and content creators.
+- Designed motion graphics, animated titles, and visual effects.
+- Performed color correction, audio enhancement, and subtitle integration.
+- Delivered projects within deadlines while maintaining production quality.
+
+**Technologies:** Adobe Premiere Pro, Adobe After Effects, DaVinci Resolve, CapCut, Adobe Photoshop, Adobe Illustrator, Figma
+
+**Achievements:**
+- Built a personal audience of 50K+ followers.
+- Produced content generating 1.5M+ organic views.
+
+---
+
+## Education
+
+### ESTIN — Higher School of Computer Science and Digital Technologies
+**Degree:** Engineering Degree in Computer Science  
+**Status:** Third-year student  
+**Achievement:** Ranked among the top 28% of the 2024 cohort.
+
+### Algerian Baccalaureate — Mathematics / Scientific Stream
+**Year:** 2022  
+**Grade:** 17.69 / 20
+
+---
+
+## Languages
+- **Arabic:** Native
+- **English:** B2
+- **French:** B2
+- **German:** A1
+
+---
+
+## Certifications & Awards
+- Full-Stack Web Development Bootcamp
+- CodeCraft Competition
+- Machine Learning
+- Google Cloud Professional Cloud Architect
+- Python Complete Course
+- Figma for User Interface and User Experience
+- Adobe After Effects
+- Adobe Premiere Pro
+
+---
+
+## Career Interests
+Noureddine is interested in full-stack web development, AI engineering, machine learning, AI-powered applications, AI agents, LLM integrations, SaaS development, backend and frontend development, API development, automation, software engineering, freelance development, software engineering internships, junior software engineering opportunities, and AI/ML opportunities.
