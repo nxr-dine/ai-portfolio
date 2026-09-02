@@ -18,7 +18,7 @@ export interface ProjectItem {
     techStack: string[]
     link?: string
     github?: string
-    image?: string
+    image: string
 }
 
 interface ProjectsCarouselProps {
@@ -166,7 +166,7 @@ function ProjectCard({ item, isActive }: { item: ProjectItem; isActive: boolean 
             )}
         >
             {/* Image Section - Adjusted for desktop */}
-            <div className="relative h-[40%] sm:h-[48%] md:h-[50%] w-full overflow-hidden bg-zinc-950">                {/* Efficient Background Aura (Low Quality, High Blur) */}
+            <div className="relative h-[40%] sm:h-[48%] md:h-[50%] w-full overflow-hidden rounded-t-2xl sm:rounded-t-[2.5rem] md:rounded-t-[3rem] bg-zinc-950">                {/* Efficient Background Aura (Low Quality, High Blur) */}
                 {item.image && (
                     <div className="absolute inset-0 z-0 overflow-hidden opacity-20 select-none pointer-events-none">
                         <Image
@@ -192,7 +192,7 @@ function ProjectCard({ item, isActive }: { item: ProjectItem; isActive: boolean 
                                 alt={item.title}
                                 fill
                                 quality={75}
-                                className="object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                                className="object-cover object-top drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                                 priority={true}
                                 loading="eager"
@@ -211,7 +211,7 @@ function ProjectCard({ item, isActive }: { item: ProjectItem; isActive: boolean 
                     </div>
                 ) : (
                     <div className="absolute inset-0 flex items-center justify-center text-zinc-700 text-xs font-mono tracking-widest uppercase">
-                        Visual Optimized
+                        Project preview unavailable
                     </div>
                 )}
             </div>
