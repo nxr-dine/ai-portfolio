@@ -124,9 +124,9 @@ def test_cors_preflight(client: TestClient):
     Infrastructure: Verifies that CORS headers are correctly set for frontend requests.
     Critical for React/Vite integration.
     """
-    # Simulate a browser 'Preflight' check from your local frontend
+    # Simulate a browser preflight from the local Next.js frontend
     headers = {
-        "Origin": "http://localhost:5173",
+        "Origin": "http://localhost:3000",
         "Access-Control-Request-Method": "POST"
     }
 
@@ -134,7 +134,7 @@ def test_cors_preflight(client: TestClient):
     response = client.options("/api/chat", headers=headers)
 
     assert response.status_code == 200
-    assert response.headers["access-control-allow-origin"] == "http://localhost:5173"
+    assert response.headers["access-control-allow-origin"] == "http://localhost:3000"
     assert "POST" in response.headers["access-control-allow-methods"]
 
 
