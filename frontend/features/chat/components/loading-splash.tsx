@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { RLogo } from "@/components/ui/RLogo"
+import { NLogo } from "@/components/ui/NLogo"
 
 interface LoadingSplashProps {
     showText?: boolean
@@ -32,7 +32,7 @@ export function LoadingSplash({ showText = false }: LoadingSplashProps) {
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <RLogo size={160} />
+                    <NLogo size={160} />
                 </motion.div>
 
                 {/* Optional loading text */}

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export function RLogo({ size = 120, className = "" }: { size?: number; className?: string }) {
+export function NLogo({ size = 120, className = "" }: { size?: number; className?: string }) {
     return (
         <svg
             width={size}
@@ -94,9 +94,9 @@ export function RLogo({ size = 120, className = "" }: { size?: number; className
                 </linearGradient>
             </defs>
 
-            {/* Stylized R letter with drawing animation */}
+            {/* Stylized N letter with drawing animation */}
             <motion.path
-                d="M 70 60 L 70 140 M 70 60 L 105 60 C 120 60 130 70 130 85 C 130 100 120 110 105 110 L 70 110 M 100 110 L 130 140"
+                d="M 70 140 L 70 60 L 130 140 L 130 60"
                 stroke="url(#letterGradient)"
                 strokeWidth="8"
                 strokeLinecap="round"
