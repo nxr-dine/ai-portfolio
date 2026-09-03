@@ -1,10 +1,11 @@
 import json
 import logging
+import os
 from typing import AsyncGenerator
 
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain.agents import AgentExecutor, create_openai_tools_agent
+from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain.tools import Tool
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import RedisChatMessageHistory
@@ -186,13 +187,6 @@ async def send_resume_email(recipient: str) -> str:
 
 # Agent
 
-llm = ChatOpenAI(
-    api_key=settings.OPENAI_API_KEY.get_secret_value(),
-    model=settings.OPENAI_MODEL,
-    temperature=0,
-    max_tokens=500
-)
-
 rag_tool = Tool(
     name="PortfolioKnowledgeBase",
     func=None,
@@ -224,29 +218,38 @@ agent_prompt = ChatPromptTemplate.from_messages([
     MessagesPlaceholder("agent_scratchpad"),
 ])
 
-agent = create_openai_tools_agent(llm, tools, agent_prompt)
+def _create_agent_with_chat_history() -> RunnableWithMessageHistory:
+    """Builds the Gemini agent only when a chat request is received."""
+    gemini_api_key = os.getenv("GEMINI_API_KEY")
+    if not gemini_api_key:
+        raise RuntimeError("GEMINI_API_KEY is not configured")
 
-agent_executor = AgentExecutor(
-    agent=agent,
-    tools=tools,
-    verbose=False,
-    handle_parsing_errors=True,
-    max_iterations=5
-)
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash",
+        google_api_key=gemini_api_key,
+        temperature=0.3
+    )
+    agent = create_tool_calling_agent(llm, tools, agent_prompt)
+    agent_executor = AgentExecutor(
+        agent=agent,
+        tools=tools,
+        verbose=False,
+        handle_parsing_errors=True,
+        max_iterations=5
+    )
+
+    return RunnableWithMessageHistory(
+        agent_executor,
+        get_session_history,
+        input_messages_key="input",
+        history_messages_key="chat_history"
+    )
 
 
 # Streaming
 
 def get_session_history(session_id: str) -> RedisChatMessageHistory:
     return RedisChatMessageHistory(session_id, url=settings.REDIS_URL)
-
-
-agent_with_chat_history = RunnableWithMessageHistory(
-    agent_executor,
-    get_session_history,
-    input_messages_key="input",
-    history_messages_key="chat_history"
-)
 
 
 def format_sse_event(event_type: str, data: dict) -> str:
@@ -259,6 +262,7 @@ async def stream_agent_response(message: str, session_id: str) -> AsyncGenerator
     config = {"configurable": {"session_id": session_id}}
 
     try:
+        agent_with_chat_history = _create_agent_with_chat_history()
         async for event in agent_with_chat_history.astream_events(
                 {"input": message},
                 config=config,

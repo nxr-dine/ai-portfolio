@@ -40,9 +40,8 @@ class Settings(BaseSettings):
     POSTGRES_DB: str = "portfolio_db"
 
     # --- AI & RAG ---
-    OPENAI_API_KEY: SecretStr
-    OPENAI_MODEL: str = "gpt-4o-mini"
-    VECTOR_DB_COLLECTION: str = "portfolio_documents_noureddine_v1"
+    GEMINI_API_KEY: Optional[SecretStr] = None
+    VECTOR_DB_COLLECTION: str = "portfolio_documents_noureddine_gemini_v1"
 
     # --- Caching (Redis) ---
     REDIS_URL: Optional[str] = None

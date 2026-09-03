@@ -5,7 +5,7 @@ from typing import List, Optional
 
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncEngine
 from langchain_postgres import PGVector
-from langchain_openai import OpenAIEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import DirectoryLoader, TextLoader, PyPDFLoader
 from langchain_community.retrievers import BM25Retriever
@@ -108,7 +108,10 @@ async def ingest_data():
 
     # 2. Setup Vector Store
     engine = await get_db_engine()
-    embeddings = OpenAIEmbeddings(api_key=settings.OPENAI_API_KEY.get_secret_value())
+    embeddings = GoogleGenerativeAIEmbeddings(
+        model="models/gemini-embedding-001",
+        google_api_key=os.getenv("GEMINI_API_KEY")
+    )
 
     vector_store = PGVector(
         embeddings=embeddings,

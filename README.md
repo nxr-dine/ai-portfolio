@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-An intelligent, AI-powered portfolio website that showcases projects, skills, and experience through an interactive conversational interface. Built with Next.js 14 and FastAPI, featuring real-time AI chat powered by LangChain and OpenAI.
+An intelligent, AI-powered portfolio website that showcases projects, skills, and experience through an interactive conversational interface. Built with Next.js 14 and FastAPI, featuring real-time AI chat powered by LangChain and Google Gemini.
 
 ## Overview
 
@@ -28,7 +28,7 @@ This portfolio transforms the traditional experience into an engaging conversati
 Next.js 14, React 18, TypeScript, Tailwind CSS 4, Framer Motion, Radix UI
 
 ### Backend
-FastAPI, LangChain, OpenAI, PostgreSQL + pgvector, Redis, Resend
+FastAPI, LangChain, Google Gemini, PostgreSQL + pgvector, Redis, Resend
 
 ## Getting Started
 
@@ -36,7 +36,7 @@ FastAPI, LangChain, OpenAI, PostgreSQL + pgvector, Redis, Resend
 - Node.js 18+
 - Python 3.10+
 - Docker & Docker Compose (for local Postgres + Redis)
-- OpenAI API Key
+- Google Gemini API Key
 - Resend API Key
 
 ### Quick Start
@@ -67,7 +67,7 @@ Visit http://localhost:3000
 
 1. Push this repository to GitHub and create a new Blueprint on [Render](https://render.com) using `render.yaml`.
 2. Set `CORS_ORIGINS` to the frontend URL, such as `https://your-frontend-domain.com`.
-3. Add your OpenAI, Resend, PostgreSQL, and Redis values to the service environment variables in Render.
+3. Add your Google Gemini, Resend, PostgreSQL, and Redis values to the service environment variables in Render.
 4. After deployment, verify `https://your-backend-domain.onrender.com/health` returns a healthy response.
 5. Set the frontend's `NEXT_PUBLIC_API_URL` to `https://your-backend-domain.onrender.com/api` and rebuild the frontend.
 
@@ -98,7 +98,7 @@ Replace these files in `frontend/public/`:
 ### Backend (`backend/.env`)
 | Variable | Description |
 |---|---|
-| `OPENAI_API_KEY` | OpenAI API key (required) |
+| `GEMINI_API_KEY` | Google Gemini API key (required) |
 | `RESEND_API_KEY` | Resend email API key (required) |
 | `RESEND_FROM` | Verified sender email |
 | `OWNER_EMAIL` | Where contact form messages are sent |
