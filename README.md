@@ -63,6 +63,14 @@ cd frontend && npm run dev
 
 Visit http://localhost:3000
 
+### Deploy the Backend to Render
+
+1. Push this repository to GitHub and create a new Blueprint on [Render](https://render.com) using `render.yaml`.
+2. Set `CORS_ORIGINS` to the frontend URL, such as `https://your-frontend-domain.com`.
+3. Add your OpenAI, Resend, PostgreSQL, and Redis values to the service environment variables in Render.
+4. After deployment, verify `https://your-backend-domain.onrender.com/health` returns a healthy response.
+5. Set the frontend's `NEXT_PUBLIC_API_URL` to `https://your-backend-domain.onrender.com/api` and rebuild the frontend.
+
 ## Customization
 
 ### Knowledge Base
